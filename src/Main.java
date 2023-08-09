@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
         PayrollSystem payrollSystem = new PayrollSystem();
@@ -10,9 +11,8 @@ public class Main {
         System.out.println("Employee List : ");
         payrollSystem.showEmployee();
         System.out.println("Removing Employee : ");
-        payrollSystem.removeEmployee(2);
+        payrollSystem.removeEmployee(1);
         System.out.println("Remaining Employee List : ");
         payrollSystem.showEmployee();
-
     }
 }

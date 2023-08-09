@@ -1,4 +1,4 @@
-public class PartTimeEmployee extends Employee {
+class PartTimeEmployee extends Employee {
     private double hoursWorked;
     private double hourlyRate;
 
