@@ -23,4 +23,10 @@ public class PayrollSystem {
             }
         }
     }
+
+    public void showEmployee() {
+        for (Employee employee : employeeList) {
+            System.out.println(employee);
+        }
+    }
 }
