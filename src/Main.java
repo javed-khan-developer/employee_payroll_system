@@ -29,6 +29,8 @@ public class Main {
         Employee updatedEmployee = payrollSystem.updateEmployeeName(4, "Javed Khan");
         System.out.println("the employee with updated name is :" + updatedEmployee.getEmployeeName() + " with id : "
                 + updatedEmployee.getEmployeeId());
+        // show employee sort by salary
+        payrollSystem.sortEmployeesBySalary();
         payrollSystem.showEmployee();
     }
 }

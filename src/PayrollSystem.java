@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 
 class PayrollSystem {
     private ArrayList<Employee> employeeList;
@@ -59,4 +60,9 @@ class PayrollSystem {
         }
         return totalSalary;
     }
+
+    public void sortEmployeesBySalary() {
+        employeeList.sort(Comparator.comparingDouble(Employee::calculateSalary));
+    }
+
 }
