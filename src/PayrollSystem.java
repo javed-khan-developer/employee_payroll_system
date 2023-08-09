@@ -11,7 +11,7 @@ class PayrollSystem {
         employeeList.add(employee);
     }
 
-    public void removeEmployee(int id) {
+    public void removeEmployeeById(int id) {
         Employee employeeToRemove = null;
         for (Employee employee : employeeList) {
             if (employee.getEmployeeId() == id) {
@@ -38,5 +38,14 @@ class PayrollSystem {
             totalSalary += employee.calculateSalary();
         }
         return totalSalary;
+    }
+
+    public Employee findEmployeeById(int id) {
+        for (Employee employee : employeeList) {
+            if (employee.getEmployeeId() == id) {
+                return employee;
+            }
+        }
+        return null;
     }
 }
