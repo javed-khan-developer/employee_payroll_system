@@ -15,6 +15,10 @@ abstract class Employee {
         return id;
     }
 
+    public void setEmployeeName(String newName) {
+        this.name = newName;
+    }
+
     public abstract double calculateSalary();
 
 }

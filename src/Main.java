@@ -25,5 +25,10 @@ public class Main {
         Employee findEmployee = payrollSystem.findEmployeeById(4);
         System.out.println("employee found with id : " + findEmployee.getEmployeeId() + " Name is: "
                 + findEmployee.getEmployeeName());
+        // update the employee by passing new name and id
+        Employee updatedEmployee = payrollSystem.updateEmployeeName(4, "Javed Khan");
+        System.out.println("the employee with updated name is :" + updatedEmployee.getEmployeeName() + " with id : "
+                + updatedEmployee.getEmployeeId());
+        payrollSystem.showEmployee();
     }
 }

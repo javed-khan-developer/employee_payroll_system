@@ -11,6 +11,26 @@ class PayrollSystem {
         employeeList.add(employee);
     }
 
+    public Employee updateEmployeeName(int id, String newName) {
+        Employee employeeToUpdate = findEmployeeById(id);
+        if (employeeToUpdate != null) {
+            employeeToUpdate.setEmployeeName(newName);
+
+        } else {
+            System.out.println("Employee with " + id + " not found");
+        }
+        return employeeToUpdate;
+    }
+
+    public Employee findEmployeeById(int id) {
+        for (Employee employee : employeeList) {
+            if (employee.getEmployeeId() == id) {
+                return employee;
+            }
+        }
+        return null;
+    }
+
     public void removeEmployeeById(int id) {
         Employee employeeToRemove = null;
         for (Employee employee : employeeList) {
@@ -38,14 +58,5 @@ class PayrollSystem {
             totalSalary += employee.calculateSalary();
         }
         return totalSalary;
-    }
-
-    public Employee findEmployeeById(int id) {
-        for (Employee employee : employeeList) {
-            if (employee.getEmployeeId() == id) {
-                return employee;
-            }
-        }
-        return null;
     }
 }
