@@ -14,5 +14,7 @@ public class Main {
         payrollSystem.removeEmployee(1);
         System.out.println("Remaining Employee List : ");
         payrollSystem.showEmployee();
+        // total salary of all employees
+        System.out.println("total salary : " + payrollSystem.calculateTotalSalary());
     }
 }

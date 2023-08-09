@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 class PayrollSystem {
     private ArrayList<Employee> employeeList;
-    private double totalSalary;
 
     public PayrollSystem() {
         employeeList = new ArrayList<>();
@@ -31,5 +30,13 @@ class PayrollSystem {
                     + ", salary: " +
                     employee.calculateSalary() + "]");
         }
+    }
+
+    public double calculateTotalSalary() {
+        double totalSalary = 0;
+        for (Employee employee : employeeList) {
+            totalSalary += employee.calculateSalary();
+        }
+        return totalSalary;
     }
 }
